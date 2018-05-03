@@ -1,0 +1,5 @@
+message Login{  
+        required string cmd = 1;  
+        required string name = 2;
+        required string pw = 3;
+}

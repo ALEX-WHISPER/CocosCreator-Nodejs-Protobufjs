@@ -1,0 +1,7 @@
+package Test;
+
+message userInfo {
+    required int32 userID = 0;
+    required string userName = 1;
+    optional string userEmail = 2;
+}
