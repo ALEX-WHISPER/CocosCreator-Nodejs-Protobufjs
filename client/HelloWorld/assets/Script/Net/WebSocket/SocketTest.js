@@ -12,6 +12,6 @@ cc.Class({
     },
 
     sendUserInfoToServer: function() {
-        netControl.sendUserInfo(312, "ZhongYichen", "zycwhisper@gmail.com");
+        netControl.sendUserInfo(47, "Agent-47", "Codename47@Hitman.com");
     }
 });
