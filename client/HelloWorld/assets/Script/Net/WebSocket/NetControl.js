@@ -1,4 +1,3 @@
-var onfire = require("onfire");
 var netConfig = require("NetConfig");
 var protoControl = require("protoTest");
 

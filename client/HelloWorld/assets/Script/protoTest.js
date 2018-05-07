@@ -74,28 +74,30 @@ var ProtoControl = {
           callback(msg);
         }
       };
-
+      
       this.buildProtoModule(dataFromServer.fn, decodeBuffer);
     },
 
     //  encode specified msg which will be sent to server, to buffer
     encodeUserInfo: function(userID, userName, userEmail, callback) {
-        var setUserInfo = function(UserInfoModule) {
-          let userInfoModule = new UserInfoModule();
+        
+      //  callback on buildProtoModule()  
+      var setUserInfo = function(UserInfoModule) {
+        let userInfoModule = new UserInfoModule();
 
-          userInfoModule.set("userID", userID);
-          userInfoModule.set("userName", userName);
-          userInfoModule.set("userEmail", userEmail);
+        userInfoModule.set("userID", userID);
+        userInfoModule.set("userName", userName);
+        userInfoModule.set("userEmail", userEmail);
 
-          let msg = userInfoModule;
-          let buffer = UserInfoModule.encode(msg).toArrayBuffer();
+        let msg = userInfoModule;
+        let buffer = UserInfoModule.encode(msg).toArrayBuffer();
 
-          if (callback) {
-            callback(msg, buffer);
-          }
-        };
+        if (callback) {
+          callback(msg, buffer);
+        }
+      };
 
-        this.buildProtoModule('Test.userInfo', setUserInfo); 
+      this.buildProtoModule('Test.userInfo', setUserInfo); 
     }
   };
 

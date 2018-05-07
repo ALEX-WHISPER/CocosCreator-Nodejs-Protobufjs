@@ -61,6 +61,7 @@ cc.Class({
         });
     },
 
+    //  获取用户公开信息
     getUserInfo: function() {
         wx.getUserInfo({
             withCredentials: true,
